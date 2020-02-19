@@ -1,0 +1,19 @@
+# Parameters for wlnn-mnist-no-evolution.py with hebbian learning on the MNIST dataset.
+
+# Machine
+use_cuda: False
+
+# Data
+dataset: mnist
+num_inputs: 256
+num_outputs: 10
+
+# Network
+p_initial_connection_enabled: 1
+
+# Learning
+learning_rule: hebbian
+optimizer: adam
+num_epochs: 100
+batch_size: 256
+lr: 0.01

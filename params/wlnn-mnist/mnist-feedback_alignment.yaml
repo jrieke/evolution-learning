@@ -1,0 +1,33 @@
+# Parameters for wlnn-mnist.py with the MNIST dataset.
+
+# Machine
+use_cuda: False
+num_workers: 1
+
+# Dataset
+dataset: mnist
+num_inputs: 256
+num_outputs: 10
+
+# Evolution
+num_generations: 4096
+population_size: 180
+# Note that we use twice the tournament size as in the WANN paper. Their implementation
+# contains a bug that makes it use twice the tournament size given in the paper.
+tournament_size: 32
+p_initial_connection_enabled: 0.05
+p_add_node: 0.2
+p_add_connection: 0.8
+elite_ratio: 0.2
+cull_ratio: 0.2
+p_complexity_objective: 0.2
+num_mutations_per_generation: 5
+
+# Learning
+optimizer: adam
+learning_rule: feedback_alignment
+lr: 0.01
+batch_size: 256
+num_epochs: 5
+inherit_weights: False
+train_only_outputs: False

@@ -1,0 +1,27 @@
+# Parameters for run-wann-gym.py with the CartPole-v0 environment.
+# As in the WANN paper (Gaier et al. 2019) except where noted.
+# Task: A pole has to be balanced on a cart (most simple gym environment).
+
+# Machine
+num_workers: 1
+
+# Data
+env_name: 'CartPole-v0'
+take_argmax_action: True
+num_inputs: 4
+num_outputs: 2
+
+# Evolution
+num_generations: 100
+population_size: 96
+tournament_size: 12
+num_trials: 5  # quite some variation between trials
+p_initial_connection_enabled: 0.5
+p_change_activation: 0.5
+p_add_node: 0.25
+p_add_connection: 0.25
+elite_ratio: 0.2
+cull_ratio: 0.2
+test_every: 5
+p_complexity_objective: 0.8
+num_mutations_per_generation: 1
